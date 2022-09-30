@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
+
+* {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: #0c192c;
+  overflow: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  animation: body 0.5s 0.5s forwards;
+}
+@keyframes body {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: #ff2d75;
+}
+.bg-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.dots {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.dots span {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(120s / var(--i));
+}
+.dots span:nth-child(even) {
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7555, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+input {
+  color: white !important;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.685) !important;
+  font-size: 25px;
+}
+
+li > button {
+  color: rgb(10, 216, 216) !important;
+  border: 1px solid rgba(10, 216, 216, 0.23) !important;
+}
+
+.card--wrapper {
+  opacity: 0;
+  animation: card 0.4s 0.4s forwards;
+}
+
+@keyframes card {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.table--container {
+  opacity: 0;
+  animation: table 0.4s 0.4s forwards;
+}
+
+@keyframes table {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
