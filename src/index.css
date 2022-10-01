@@ -83,6 +83,16 @@ li > button {
   animation: card 0.4s 0.4s forwards;
 }
 
+.table--container {
+  opacity: 0;
+  animation: table 0.4s 0.4s forwards;
+}
+
+.toggle {
+  opacity: 0;
+  animation: toggle 0.4s 0.4s forwards;
+}
+
 @keyframes card {
   0% {
     opacity: 0;
@@ -92,12 +102,16 @@ li > button {
   }
 }
 
-.table--container {
-  opacity: 0;
-  animation: table 0.4s 0.4s forwards;
+@keyframes table  {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes table {
+@keyframes toggle {
   0% {
     opacity: 0;
   }

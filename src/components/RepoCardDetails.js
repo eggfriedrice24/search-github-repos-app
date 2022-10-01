@@ -26,7 +26,7 @@ const RepoCardDetails = ({
       <Box
         className="card--wrapper"
         sx={{
-          width: 800,
+          maxWidth: { lg: 800, md: 600, sm: 400 },
           boxShadow: 3,
           p: 1,
           m: 1,
@@ -39,6 +39,8 @@ const RepoCardDetails = ({
             backgroundColor: "#1a202c",
             borderColor: "steelblue",
             display: "flex",
+            alignItems: { md: 'center', sm: 'center', xs: 'center' },
+            flexDirection: { lg: 'row', md: 'column', sm: 'column', xs: 'column' }
           }}
         >
           <CardHeader
@@ -60,6 +62,7 @@ const RepoCardDetails = ({
             sx={{
               display: "flex",
               flexDirection: "column",
+              alignItems: 'center',
               gap: 4,
             }}
           >
@@ -81,6 +84,7 @@ const RepoCardDetails = ({
               variant="body2"
               color="textSecondary"
               sx={{ color: "steelblue" }}
+              textAlign='center'
             >
               Description: {description}
             </Typography>

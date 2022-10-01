@@ -14,11 +14,11 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 
 const HomePage = () => {
-  const { searchResult, loading, searchItem, handleChange, listToDisplay } =
+  const { searchItem, handleChange, listToDisplay } =
     useFetchAll();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [reposPerPage] = useState(6);
+  const reposPerPage = 6;
 
   // pagination logic
   const indexOfLastRepo = currentPage * reposPerPage;
@@ -52,6 +52,7 @@ const HomePage = () => {
       >
         {listToDisplay.length > 0 && (
           <FormControlLabel
+            className="toggle"
             size="medium"
             sx={{ color: "white" }}
             value="top"
@@ -71,7 +72,7 @@ const HomePage = () => {
           >
             {currentRepos.map((repo) => {
               return (
-                <Grid xs={8} sm={7} md={5} lg={4} key={repo.id}>
+                <Grid key={repo.id}>
                   <RepoCard
                     name={repo.name}
                     description={repo.description}

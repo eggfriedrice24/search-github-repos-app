@@ -27,8 +27,9 @@ const Header = ({ text }) => {
           backgroundColor: "#1a202c",
           padding: 2,
           borderRadius: "10px",
-          maxWidth: 700,
+          maxWidth: { md: 700, lg: 1000 },
           textAlign: "center",
+          display: { lg: "block", md: "block", sm: "none", xs: "none" },
         }}
       >
         <p>{text}</p>
