@@ -10,7 +10,7 @@ export const useFetchAll = () => {
   // const debounceText = useDebounce(searchItem, 500)
 
   const handleChange = async (e) => {
-    const { value } = e.target;
+    const { value } = e.target; 
 
     setSearchItem(value);
     if (value === "") {

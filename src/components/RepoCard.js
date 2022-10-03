@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
@@ -12,7 +12,15 @@ import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
+
 const RepoCard = ({ name, description, repoOwner, repoPage, id, avatar }) => {
+
+  const navigate = useNavigate();
+
+  const redirectHandler = () => {
+    navigate(`details/${id}?id=${id}`);
+  }
+
   return (
     <Box
       className="card--wrapper"
@@ -44,12 +52,12 @@ const RepoCard = ({ name, description, repoOwner, repoPage, id, avatar }) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Link to={`/details/${id}`}>
-            <Button variant="outlined" size="small" sx={{ color: "#ff2d75" }}>
+          {/* <Link to={`/details/${id}`}> */}
+            <Button onClick={redirectHandler} variant="outlined" size="small" sx={{ color: "#ff2d75" }}>
               Details
               <KeyboardDoubleArrowRightIcon sx={{ fontSize: 20 }} />
             </Button>
-          </Link>
+          {/* </Link> */}
         </CardActions>
       </Card>
     </Box>
