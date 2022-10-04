@@ -13,12 +13,12 @@ import Avatar from "@mui/material/Avatar";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
 
-const RepoCard = ({ name, description, repoOwner, repoPage, id, avatar }) => {
+const RepoCard = ({ name, description, repoOwner, repoPage, id, avatar, query }) => {
 
   const navigate = useNavigate();
 
   const redirectHandler = () => {
-    navigate(`details/${id}?id=${id}`);
+    navigate(`details/${id}?search=${query}`);
   }
 
   return (

@@ -79,6 +79,7 @@ const HomePage = () => {
                     repoOwner={repo.owner.login}
                     avatar={repo.owner.avatar_url}
                     id={repo.id}
+                    query={searchItem}
                   />
                 </Grid>
               );
