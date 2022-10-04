@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { useFetchSingle } from "../hooks/useFetchSingle";
 import Message from "../components/Message";
@@ -7,7 +7,7 @@ import RepoCardDetails from "../components/RepoCardDetails";
 import Header from "../components/Header";
 
 const DetailsPage = () => {
-  const { data, loading, id, error } = useFetchSingle();
+  const { data, loading, error } = useFetchSingle();
 
   if (error) {
     return (

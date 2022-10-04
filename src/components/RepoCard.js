@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
@@ -12,14 +12,20 @@ import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
-
-const RepoCard = ({ name, description, repoOwner, repoPage, id, avatar, query }) => {
-
+const RepoCard = ({
+  name,
+  description,
+  repoOwner,
+  repoPage,
+  id,
+  avatar,
+  query,
+}) => {
   const navigate = useNavigate();
 
   const redirectHandler = () => {
     navigate(`details/${id}?search=${query}`);
-  }
+  };
 
   return (
     <Box
@@ -53,10 +59,15 @@ const RepoCard = ({ name, description, repoOwner, repoPage, id, avatar, query })
         </CardContent>
         <CardActions>
           {/* <Link to={`/details/${id}`}> */}
-            <Button onClick={redirectHandler} variant="outlined" size="small" sx={{ color: "#ff2d75" }}>
-              Details
-              <KeyboardDoubleArrowRightIcon sx={{ fontSize: 20 }} />
-            </Button>
+          <Button
+            onClick={redirectHandler}
+            variant="outlined"
+            size="small"
+            sx={{ color: "#ff2d75" }}
+          >
+            Details
+            <KeyboardDoubleArrowRightIcon sx={{ fontSize: 20 }} />
+          </Button>
           {/* </Link> */}
         </CardActions>
       </Card>

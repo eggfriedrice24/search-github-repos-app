@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -39,8 +37,13 @@ const RepoCardDetails = ({
             backgroundColor: "#1a202c",
             borderColor: "steelblue",
             display: "flex",
-            alignItems: { md: 'center', sm: 'center', xs: 'center' },
-            flexDirection: { lg: 'row', md: 'column', sm: 'column', xs: 'column' }
+            alignItems: { md: "center", sm: "center", xs: "center" },
+            flexDirection: {
+              lg: "row",
+              md: "column",
+              sm: "column",
+              xs: "column",
+            },
           }}
         >
           <CardHeader
@@ -55,6 +58,7 @@ const RepoCardDetails = ({
               <img
                 style={{ width: 300, height: 250, borderRadius: 10 }}
                 src={image}
+                alt=''
               />
             }
           />
@@ -62,7 +66,7 @@ const RepoCardDetails = ({
             sx={{
               display: "flex",
               flexDirection: "column",
-              alignItems: 'center',
+              alignItems: "center",
               gap: 4,
             }}
           >
@@ -84,7 +88,7 @@ const RepoCardDetails = ({
               variant="body2"
               color="textSecondary"
               sx={{ color: "steelblue" }}
-              textAlign='center'
+              textAlign="center"
             >
               Description: {description}
             </Typography>

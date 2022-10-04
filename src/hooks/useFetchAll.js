@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import useDebounce from "./useDebounce";
+import { useState } from "react";
+// import useDebounce from "./useDebounce";
 import axios from "axios";
 
 export const useFetchAll = () => {
@@ -10,7 +10,7 @@ export const useFetchAll = () => {
   // const debounceText = useDebounce(searchItem, 500)
 
   const handleChange = async (e) => {
-    const { value } = e.target; 
+    const { value } = e.target;
 
     setSearchItem(value);
     if (value === "") {

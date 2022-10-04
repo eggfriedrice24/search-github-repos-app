@@ -14,8 +14,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 
 const HomePage = () => {
-  const { searchItem, handleChange, listToDisplay } =
-    useFetchAll();
+  const { searchItem, handleChange, listToDisplay } = useFetchAll();
 
   const [currentPage, setCurrentPage] = useState(1);
   const reposPerPage = 6;
